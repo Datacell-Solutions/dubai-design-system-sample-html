@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/dda.css" />
+
+    <script type="module">
+      import { defineCustomElements } from "./stencil/loader/index.es2017.js";
+      defineCustomElements();
+    </script>
+    <!-- <script type="module" >
+        import { defineCustomElements } from 'https://cdn.jsdelivr.net/npm/@dubai-design-system/components-js/loader/index.es2017.js';
+        defineCustomElements();
+    </script> -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js"
+      integrity="sha512-6sSYJqDreZRZGkJ3b+YfdhB3MzmuP9R7X1QZ6g5aIXhRvR1Y/N/P47jmnkENm7YL3oqsmI6AK+V6AD99uWDnIw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="./css/personalization.css" />
+  </head>
+
+  <body class="transparent">
+    <dda-header
+      first-logo-src="assets/img/government-of-dubai.svg"
+      first-logo-white-src="assets/img/government-of-dubai-white.svg"
+      first-logo-alt="undefined"
+      second-logo-src="assets/img/digital-logo.svg"
+      second-logo-white-src="assets/img/digital-logo-white.svg"
+      second-logo-alt="Dubai-Digital-Authority"
+      login-link="/login.html"
+      readspeakerlink="app-eu.readspeaker.com"
+      languageswitch="() => console.log('Language Switcher')"
+      smtextsize="() => console.log('Small Text')"
+      basetextsize="() => console.log('Base Text')"
+      lgtextsize="() => console.log('Large Text')"
+      normalcontrast="() => console.log('Normal Text')"
+      blindcontrast="() => console.log('Blind Text')"
+      redcontrast="() => console.log('Red Text')"
+      greencontrast="() => console.log('Green Text')"
+      quick-links='[{"label":"Home","href":"/","subMenu":[]},{"label":"Components","href":"/components.html","subMenu":[{"title":"Main Services","description":"Our most important services","icon":"sentiment_satisfied","href":"#"},{"title":"Sub services","description":"optional services to help you","icon":"sentiment_dissatisfied","href":"#"}]},{"label":"About","href":"./about-us.html","subMenu":[]}]'
+      side-menu-items='[{"label":"About","href":"/about-us.html","subMenu":[]},{"label":"Components","href":"/components.html","subMenu":[]},{"label":"Contact","href":"/contact-us.html","subMenu":[]},{"label":"FAQ","href":"/faq.html","subMenu":[]},{"label":"Sample Link","href":"#","subMenu":[{"label":"Submenu-1","href":"#"},{"label":"Submenu-2","href":"#"}]}]'
+      class="hydrated"
+    >
+    </dda-header>
+
+    <script>
+      const ddaHeader = document.querySelector("dda-header");
+      ddaHeader.addEventListener("languageSwitch", (event) => {
+        window.location.assign(window.location.origin + "/aboutusar.html");
+      });
+      ddaHeader.addEventListener("blindContrast", (event) => {
+        $("html").attr("data-theme", "dark");
+      });
+    </script>
+
+    <div class="home-slider">
+      <img src="assets/img/home-banner.jpg" alt="banner" />
+      <div class="slide-content">
+        <h2>Our objective is to digitalize life in Dubai</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+          consequatur totam optio reprehenderit ipsum labore!
+        </p>
+        <div class="d-flex gap-4">
+          <dda-button
+            button_color="default-primary"
+            start_icon=""
+            end_icon=""
+            custom_class=""
+            component_mode=""
+            button_id="button"
+            aria_label="button"
+            onclick="console.log('clicked')"
+            size="lg"
+            gap="2"
+            >Primary
+          </dda-button>
+
+          <dda-button
+            button_color="default-secondary"
+            start_icon=""
+            end_icon=""
+            custom_class=""
+            component_mode=""
+            button_id="button"
+            aria_label="button"
+            onclick="console.log('clicked')"
+            size="lg"
+            gap="2"
+            >Secondary
+          </dda-button>
+        </div>
+      </div>
+    </div>
+
+    <div class="quick-links-wrap">
+      <div class="quick-links">
+        <a href="#" class="link-item">
+          <i class="fa fa-dashboard"></i>
+          <span class="title">Link 1</span>
+          <span class="subtitle"
+            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit,
+            placeat.</span
+          >
+        </a>
+        <a href="#" class="link-item">
+          <i class="fa fa-anchor"></i>
+          <span class="title">Link 2</span>
+          <span class="subtitle"
+            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit,
+            placeat.</span
+          >
+        </a>
+        <a href="#" class="link-item">
+          <i class="fa fa-user"></i>
+          <span class="title">Link 3</span>
+          <span class="subtitle"
+            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit,
+            placeat.</span
+          >
+        </a>
+        <a href="#" class="link-item">
+          <i class="fa fa-smile"></i>
+          <span class="title">Link 4</span>
+          <span class="subtitle"
+            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit,
+            placeat.</span
+          >
+        </a>
+        <a href="#" class="link-item">
+          <i class="fa fa-search"></i>
+          <span class="title">Link 5</span>
+          <span class="subtitle"
+            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit,
+            placeat.</span
+          >
+        </a>
+      </div>
+    </div>
+
+    <dda-sticky-footer
+      happiness-icon-href="#"
+      happiness-icon-src="assets/img/icn/icn-happy.svg"
+      happiness-icon-alt="Happiness"
+      happiness-icon-tooltip="Happiness"
+      accessibility-icon-href="#"
+      accessibility-icon-src="assets/img/icn/icn-complaints.svg"
+      accessibility-icon-alt="Suggestions and complaints"
+      accessibility-icon-tooltip="Suggestions &amp; complaints"
+      services-icon-href="#"
+      services-icon-src="assets/img/icn/icn-grid-view.svg"
+      services-icon-alt="Services"
+      services-icon-tooltip="Services"
+      services-icon-text="Services"
+      first-logo-href="#"
+      first-logo-src="assets/img/digital-logo.svg"
+      first-logo-alt="Logo 1"
+      first-logo-tooltip="Logo 1"
+      second-logo-href="#"
+      second-logo-src="assets/img/digital-logo.svg"
+      second-logo-alt="Logo 1"
+      second-logo-tooltip="Logo 1"
+      third-logo-href="#"
+      third-logo-src="assets/img/digital-logo.svg"
+      third-logo-alt="Logo 3"
+      third-logo-tooltip="Logo 3"
+      location-button-href="#"
+      location-button-text="Location"
+      location-button-icon=""
+      news-button-href="#"
+      news-button-text="News"
+      news-button-icon=""
+      ai-icon-href="#"
+      ai-icon-src="assets/img/icn/DubaiAI.svg"
+      ai-icon-alt="Digital AI"
+      ai-icon-tooltip="Digital AI"
+      chat-icon-href="#"
+      chat-icon-src="assets/img/icn/icn-chat_bubble_outline.svg"
+      chat-icon-alt="Online Chat"
+      chat-icon-tooltip="Online Chat"
+    >
+    </dda-sticky-footer>
+  </body>
+</html>

@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="light" dir="">
+<!doctype html>
+<html lang="en" data-theme="light" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,10 +20,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="css/dda.css" />
+    <link rel="stylesheet" href="../css/dda.css" />
 
     <script type="module">
-      import { defineCustomElements } from "./stencil/loader/index.js";
+      import { defineCustomElements } from "../stencil/loader/index.js";
       defineCustomElements();
     </script>
 
@@ -36,7 +36,7 @@
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
 
-    <link rel="stylesheet" href="./css/personalization.css" />
+    <link rel="stylesheet" href="../css/personalization.css" />
   </head>
 
   <body class="transparents">
@@ -66,7 +66,9 @@
     <script>
       const ddaHeader = document.querySelector("dda-header");
       ddaHeader.addEventListener("languageSwitch", (event) => {
-        window.location.assign(window.location.origin + "/ar" + window.location.pathname);
+        window.location.assign(
+          window.location.origin + window.location.pathname.replace("/ar", "")
+        );
       });
       ddaHeader.addEventListener("blindContrast", (event) => {
         $("html").attr("data-theme", "dark");
@@ -111,23 +113,21 @@
               </dda-tooltip>
             </h1>
             <p>
-              We are excited to announce the launch of a unified design system
-              developed specifically for all government entities. This design
-              system provides a flexible, cohesive framework that ensures
-              consistency across platforms while allowing each entity the
-              customization they need to meet their unique objectives and user
-              needs.
+              يسعدنا أن نعلن عن إطلاق نظام تصميم موحد تم تطويره خصيصًا لجميع
+              الجهات الحكومية. يوفر نظام التصميم هذا إطارًا مرنًا ومتماسكًا يضمن
+              الاتساق عبر المنصات مع السماح لكل جهة بالتخصيص الذي تحتاجه لتلبية
+              أهدافها الفريدة واحتياجات المستخدمين.
             </p>
             <p>
-              The design system is available to all entities as a downloadable
-              file and can be accessed in the
+              نظام التصميم متاح لجميع الكيانات كملف قابل للتنزيل ويمكن الوصول
+              إليه في
               <a
                 href="https://digital-dubai.gitbook.io/dubai-design-system/downloads"
                 target="_blank"
-                >Downloads</a
+                >التنزيلات</a
               >
-              section. GitBook includes detailed documentation covering each
-              component's usage, anatomy, and dos and don’ts.
+              يتضمن GitBook وثائق تفصيلية تغطي استخدام كل مكون، وتركيبه، وما يجب
+              وما لا يجب فعله.
             </p>
           </div>
           <div class="col-sm-1">&nbsp;</div>
@@ -148,7 +148,7 @@
           button_id="button"
           aria_label="tabs"
           class="hydrated"
-          tab_texts='["Key Benefits", "Improvement Roadmap"]'
+          tab_texts='["الفوائد الرئيسية", "خارطة طريق التحسين"]'
           tab_icons='["home", "notes"]'
         >
         </dda-tabs>
@@ -179,16 +179,15 @@
                       <h4
                         class="dda-card-title dda-flex dda-align-center dda-justify-space"
                       >
-                        <span>Consistency Across Platforms</span>
+                        <span>الاتساق عبر المنصات</span>
                       </h4>
 
                       <p
                         class="dda-card-text dda-flex dda-align-center dda-gap-2"
                       >
-                        By using standardized components, colors, typography,
-                        and layouts, we ensure a cohesive look and feel across
-                        all government digital interfaces, reinforcing trust and
-                        recognition for users.
+                        من خلال استخدام مكونات وألوان وطباعة وتخطيطات موحدة،
+                        فإننا نضمن مظهرًا وشعورًا متماسكين عبر جميع واجهات
+                        الحكومة الرقمية، مما يعزز الثقة والتعرف على المستخدمين.
                       </p>
                     </div>
                   </div>
@@ -219,17 +218,16 @@
                       <h4
                         class="dda-card-title dda-flex dda-align-center dda-justify-space"
                       >
-                        <span>Customizable and Flexible</span>
+                        <span>قابلة للتخصيص ومرنة</span>
                       </h4>
 
                       <p
                         class="dda-card-text dda-flex dda-align-center dda-gap-2"
                       >
-                        The design system is built to be adaptable. Each entity
-                        can modify and personalize components as needed,
-                        ensuring that the system supports your specific content,
-                        users, and objectives without sacrificing overall visual
-                        harmony.
+                        تم تصميم نظام التصميم ليكون قابلاً للتكيف. يمكن لكل كيان
+                        تعديل وتخصيص المكونات حسب الحاجة، مما يضمن أن يدعم
+                        النظام المحتوى الخاص بك والمستخدمين والأهداف دون التضحية
+                        بالتناغم البصري العام.
                       </p>
                     </div>
                   </div>
@@ -260,17 +258,16 @@
                       <h4
                         class="dda-card-title dda-flex dda-align-center dda-justify-space"
                       >
-                        <span>Accessibility and Usability</span>
+                        <span>إمكانية الوصول والاستخدام</span>
                       </h4>
 
                       <p
                         class="dda-card-text dda-flex dda-align-center dda-gap-2"
                       >
-                        All components in the design system are designed with
-                        accessibility standards in mind, ensuring compliance
-                        with WCAG guidelines. This makes it easier to create
-                        accessible, user-friendly content for all citizens,
-                        residents, and tourists.
+                        تم تصميم جميع المكونات في نظام التصميم مع مراعاة معايير
+                        إمكانية الوصول، مما يضمن الامتثال لإرشادات WCAG. وهذا
+                        يجعل من السهل إنشاء محتوى سهل الوصول إليه وسهل الاستخدام
+                        لجميع المواطنين والمقيمين والسياح.
                       </p>
                     </div>
                   </div>
@@ -301,17 +298,16 @@
                       <h4
                         class="dda-card-title dda-flex dda-align-center dda-justify-space"
                       >
-                        <span>Efficiency in Development</span>
+                        <span>الكفاءة في التنمية</span>
                       </h4>
 
                       <p
                         class="dda-card-text dda-flex dda-align-center dda-gap-2"
                       >
-                        The design system includes ready-made components and
-                        templates, reducing the time and resources required for
-                        design and development. This allows teams to focus more
-                        on content and functionality rather than creating new
-                        designs from scratch.
+                        يتضمن نظام التصميم مكونات وقوالب جاهزة، مما يقلل الوقت
+                        والموارد المطلوبة للتصميم والتطوير. يتيح هذا للفرق
+                        التركيز بشكل أكبر على المحتوى والوظائف بدلاً من إنشاء
+                        تصميمات جديدة من الصفر.
                       </p>
                     </div>
                   </div>
@@ -323,26 +319,25 @@
         <div class="tabsbody tabsbody-1" style="display: none">
           <div class="dda-card mb-3">
             <div class="p-4">
-              <h2>Continuous Improvement Roadmap</h2>
+              <h2>خارطة طريق التحسين المستمر</h2>
               <p>
-                DDA aims to provide continuous improvement and updates to the
-                libraries to ensure complete adherence to the design system and
-                to stay on-par with the ever-growing technology world!
+                تهدف DDA إلى توفير تحسينات وتحديثات مستمرة للمكتبات لضمان
+                الالتزام الكامل بنظام التصميم والبقاء على قدم المساواة مع عالم
+                التكنولوجيا المتنامي باستمرار!
               </p>
               <p class="dda-color-primary">
-                DDA has a Future Iterations & Feedback Integration plan for
-                bringing you into the loop and working towards a matured design
-                system that everyone can trust and implement.
+                تتمتع DDA بخطة تكامل التكرارات والملاحظات المستقبلية لإدخالك في
+                الحلقة والعمل نحو نظام تصميم ناضج يمكن للجميع الثقة به وتنفيذه.
               </p>
               <p>
                 <em>
-                  You can share your feedback/issues to us by emailing them to
-                  us in the specified format and we would incorporate them into
-                  our development pipeline.
+                  يمكنك مشاركة تعليقاتك/مشكلاتك معنا عن طريق إرسالها إلينا عبر
+                  البريد الإلكتروني بالتنسيق المحدد وسنقوم بدمجها في خط أنابيب
+                  التطوير الخاص بنا.
                 </em>
               </p>
               <p>
-                <a href="#">Download issue/request template</a>
+                <a href="#">تنزيل نموذج المشكلة/الطلب</a>
               </p>
             </div>
           </div>

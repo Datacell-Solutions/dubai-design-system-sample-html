@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="light" dir="">
+<!doctype html>
+<html lang="en" data-theme="light" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,16 +20,12 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="css/dda.css" />
+    <link rel="stylesheet" href="../css/dda.css" />
 
     <script type="module">
-      import { defineCustomElements } from "./stencil/loader/index.js";
+      import { defineCustomElements } from "../stencil/loader/index.js";
       defineCustomElements();
     </script>
-    <!-- <script type="module" >
-      import { defineCustomElements } from 'https://cdn.jsdelivr.net/npm/@dubai-design-system/components-js/loader/index.es2017.js';
-      defineCustomElements();
-    </script> -->
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script
@@ -40,7 +36,7 @@
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
 
-    <link rel="stylesheet" href="./css/personalization.css" />
+    <link rel="stylesheet" href="../css/personalization.css" />
   </head>
 
   <body class="transparents">
@@ -70,7 +66,7 @@
     <script>
       const ddaHeader = document.querySelector("dda-header");
       ddaHeader.addEventListener("languageSwitch", (event) => {
-        window.location.assign(window.location.origin + "/ar" + window.location.pathname);
+        window.location.assign(window.location.origin + "/aboutusar.html");
       });
       ddaHeader.addEventListener("blindContrast", (event) => {
         $("html").attr("data-theme", "dark");
@@ -89,29 +85,31 @@
         >
         </dda-breadcrumb>
 
-        <h1>Contact Dubai Digital</h1>
+        <h1>اتصل بدبي الرقمية</h1>
 
         <div class="row py-4">
           <div class="col-sm-6">
             <h2>
-              Reach Us
+              تواصل معنا
               <span class="dda-color-primary">
                 <i class="material-icons">location_on</i>
               </span>
             </h2>
-            <p>Dubai Design District, Building 1A, 11th Floor</p>
+            <p>حي دبي للتصميم، المبنى 1أ، الطابق الحادي عشر</p>
             <p>
-              <b>Operating Hours:</b>
+              <b>ساعات العمل:</b>
               <br />
-              Monday to Thursday from 7:30 - 15:30 (GMT +4)
+              من الاثنين إلى الخميس من 7:30 صباحًا حتى 15:30 مساءً (بتوقيت
+              جرينتش +4)
               <br />
-              Friday from 7:30 – 12:00 (GMT +4)
+              الجمعة من 7:30 – 12:00 (توقيت جرينتش +4)
             </p>
-            <h4>Call Center</h4>
+            <h4>مركز الاتصال</h4>
             <p>
-              <b>Operating hours:</b>
+              <b>ساعات العمل:</b>
               <br />
-              7 Days a week from 7:00AM - 12:00AM (GMT +4)
+              7 أيام في الأسبوع من الساعة 7:00 صباحًا حتى الساعة 12:00 صباحًا
+              (بتوقيت جرينتش +4)
             </p>
             <span class="dda-color-primary">
               <i class="material-icons">email</i>
@@ -121,7 +119,7 @@
             <span class="dda-color-primary">
               <i class="material-icons">phone</i>
             </span>
-            <p>600 56 0000</p>
+            <p style="direction: ltr; text-align: right">600 56 0000</p>
           </div>
           <div class="col-sm-6">
             <img
@@ -134,13 +132,13 @@
 
         <hr />
 
-        <h2>Send a message</h2>
+        <h2>أرسل رسالة</h2>
 
         <div class="row mb-4 py-4">
           <div class="col-md-6 mb-4">
             <dda-input
-              placeholder="First Name"
-              label="First Name"
+              placeholder="الاسم الأول"
+              label="الاسم الأول"
               value=""
               type="text"
               size="default"
@@ -159,8 +157,8 @@
 
           <div class="col-md-6 mb-4">
             <dda-input
-              placeholder="Last Name"
-              label="Last Name"
+              placeholder="اسم العائلة"
+              label="اسم العائلة"
               value=""
               type="text"
               size="default"
@@ -179,8 +177,8 @@
 
           <div class="col-md-6 mb-4">
             <dda-input
-              placeholder="Email"
-              label="Email"
+              placeholder="بريد إلكتروني"
+              label="بريد إلكتروني"
               value=""
               type="email"
               size="default"
@@ -199,7 +197,7 @@
 
           <div class="col-md-6 mb-4">
             <dda-phonefield
-              label="Phone Number"
+              label="رقم التليفون"
               placeholder="00 000 0000"
               helper_text=""
               error_message=""
@@ -217,11 +215,11 @@
 
           <div class="col-12 mb-4">
             <dda-textarea
-              placeholder="Enter description"
-              label="Message"
+              placeholder="أدخل التفاصيل"
+              label="رسالة"
               max_characters="200"
               value=""
-              helper_text="Min 80 Characters"
+              helper_text="الحد الأدنى 80 حرفًا"
               error_message=""
               custom_class=""
               component_mode=""
@@ -243,7 +241,7 @@
               button_id="button"
               aria_label="button"
               onClick="submitContactForm();"
-              >Submit
+              >يُقدِّم
             </dda-button>
           </div>
         </div>
@@ -261,7 +259,7 @@
         if (firstName.length < 3) {
           $("#firstname_field").attr(
             "error_message",
-            "Please enter a valid first name!"
+            "الرجاء إدخال الاسم الأول صالحًا!"
           );
           return false;
         } else {
@@ -271,7 +269,7 @@
         if (lastName.length < 3) {
           $("#lastname_field").attr(
             "error_message",
-            "Please enter a valid last name!"
+            "الرجاء إدخال اسم أخير صالح!"
           );
           return false;
         } else {
@@ -285,7 +283,7 @@
         ) {
           $("#email_field").attr(
             "error_message",
-            "Please enter a valid first name!"
+            "الرجاء إدخال الاسم الأول صالحًا!"
           );
           return false;
         } else {
@@ -295,7 +293,7 @@
         if (message.length < 80) {
           $("#message_field").attr(
             "error_message",
-            "Please enter a valid message!"
+            "الرجاء إدخال رسالة صالحة!"
           );
           return false;
         } else {

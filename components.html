@@ -70,7 +70,7 @@
     <script>
       const ddaHeader = document.querySelector("dda-header");
       ddaHeader.addEventListener("languageSwitch", (event) => {
-        window.location.assign(window.location.origin + "/aboutusar.html");
+        window.location.assign(window.location.origin + "/ar" + window.location.pathname);
       });
       ddaHeader.addEventListener("blindContrast", (event) => {
         $("html").attr("data-theme", "dark");

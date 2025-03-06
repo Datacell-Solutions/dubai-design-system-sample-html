@@ -20,16 +20,12 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./css/dda.css" />
+    <link rel="stylesheet" href="../css/dda.css" />
 
     <script type="module">
-      import { defineCustomElements } from "./stencil/loader/index.es2017.js";
+      import { defineCustomElements } from "../stencil/loader/index.js";
       defineCustomElements();
     </script>
-    <!-- <script type="module" >
-        import { defineCustomElements } from 'https://cdn.jsdelivr.net/npm/@dubai-design-system/components-js/loader/index.es2017.js';
-        defineCustomElements();
-    </script> -->
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script
@@ -40,7 +36,7 @@
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
 
-    <link rel="stylesheet" href="./css/personalization.css" />
+    <link rel="stylesheet" href="../css/personalization.css" />
   </head>
 
   <body class="transparent">
@@ -70,7 +66,7 @@
     <script>
       const ddaHeader = document.querySelector("dda-header");
       ddaHeader.addEventListener("languageSwitch", (event) => {
-        window.location.assign(window.location.origin + "/ar" + window.location.pathname);
+        window.location.assign(window.location.origin + "/aboutusar.html");
       });
       ddaHeader.addEventListener("blindContrast", (event) => {
         $("html").attr("data-theme", "dark");

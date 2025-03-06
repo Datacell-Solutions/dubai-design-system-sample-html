@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="light" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
+    <title>Components | Dubai Design System</title>
 
     <link
       rel="stylesheet"
@@ -20,16 +20,12 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./css/dda.css" />
+    <link rel="stylesheet" href="../css/dda.css" />
 
     <script type="module">
-      import { defineCustomElements } from "./stencil/loader/index.es2017.js";
+      import { defineCustomElements } from "../stencil/loader/index.js";
       defineCustomElements();
     </script>
-    <!-- <script type="module" >
-        import { defineCustomElements } from 'https://cdn.jsdelivr.net/npm/@dubai-design-system/components-js/loader/index.es2017.js';
-        defineCustomElements();
-    </script> -->
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script
@@ -40,10 +36,10 @@
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
 
-    <link rel="stylesheet" href="./css/personalization.css" />
+    <link rel="stylesheet" href="../css/personalization.css" />
   </head>
 
-  <body class="transparent">
+  <body class="transparents">
     <dda-header
       first-logo-src="assets/img/government-of-dubai.svg"
       first-logo-white-src="assets/img/government-of-dubai-white.svg"
@@ -70,95 +66,31 @@
     <script>
       const ddaHeader = document.querySelector("dda-header");
       ddaHeader.addEventListener("languageSwitch", (event) => {
-        window.location.assign(window.location.origin + "/ar" + window.location.pathname);
+        window.location.assign(window.location.origin + "/aboutusar.html");
       });
       ddaHeader.addEventListener("blindContrast", (event) => {
         $("html").attr("data-theme", "dark");
       });
     </script>
 
-    <div class="home-slider">
-      <img src="assets/img/home-banner.jpg" alt="banner" />
-      <div class="slide-content">
-        <h2>Our objective is to digitalize life in Dubai</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
-          consequatur totam optio reprehenderit ipsum labore!
-        </p>
-        <div class="d-flex gap-4">
-          <dda-button
-            button_color="default-primary"
-            start_icon=""
-            end_icon=""
-            custom_class=""
-            component_mode=""
-            button_id="button"
-            aria_label="button"
-            onclick="console.log('clicked')"
-            size="lg"
-            gap="2"
-            >Primary
-          </dda-button>
+    <div class="maincontent">
+      <div class="container-xxl">
+        <dda-breadcrumb
+          design="text"
+          separator="chevron_right"
+          custom_class="mb-4"
+          component_mode=""
+          data-breadcrumbs='[{"text":"Home","icon":"home","url":"/"},{"text":"Components","icon":"menu_book","url":""}]'
+          class="hydrated"
+        >
+        </dda-breadcrumb>
 
-          <dda-button
-            button_color="default-secondary"
-            start_icon=""
-            end_icon=""
-            custom_class=""
-            component_mode=""
-            button_id="button"
-            aria_label="button"
-            onclick="console.log('clicked')"
-            size="lg"
-            gap="2"
-            >Secondary
-          </dda-button>
+        <h1>Components</h1>
+        <p class="small">Answers to most asked questions!</p>
+
+        <div class="row py-4">
+          
         </div>
-      </div>
-    </div>
-
-    <div class="quick-links-wrap">
-      <div class="quick-links">
-        <a href="#" class="link-item">
-          <i class="fa fa-dashboard"></i>
-          <span class="title">Link 1</span>
-          <span class="subtitle"
-            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit,
-            placeat.</span
-          >
-        </a>
-        <a href="#" class="link-item">
-          <i class="fa fa-anchor"></i>
-          <span class="title">Link 2</span>
-          <span class="subtitle"
-            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit,
-            placeat.</span
-          >
-        </a>
-        <a href="#" class="link-item">
-          <i class="fa fa-user"></i>
-          <span class="title">Link 3</span>
-          <span class="subtitle"
-            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit,
-            placeat.</span
-          >
-        </a>
-        <a href="#" class="link-item">
-          <i class="fa fa-smile"></i>
-          <span class="title">Link 4</span>
-          <span class="subtitle"
-            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit,
-            placeat.</span
-          >
-        </a>
-        <a href="#" class="link-item">
-          <i class="fa fa-search"></i>
-          <span class="title">Link 5</span>
-          <span class="subtitle"
-            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit,
-            placeat.</span
-          >
-        </a>
       </div>
     </div>
 

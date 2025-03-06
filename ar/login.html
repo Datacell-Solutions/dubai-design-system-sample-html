@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="light" dir="">
+<html lang="en" data-theme="light" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,19 +20,12 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!-- <link rel="stylesheet" href="css/dda.css" /> -->
+    <link rel="stylesheet" href="../css/dda.css" />
 
-    <link rel="stylesheet" href="./css/personalization.css" />
-
-    <!-- <script type="module">
-        import { defineCustomElements } from '../stencil/loader/index.js';
-        defineCustomElements();
-    </script> -->
     <script type="module">
-      import { defineCustomElements } from "./stencil/loader/index.js";
+      import { defineCustomElements } from "../stencil/loader/index.js";
       defineCustomElements();
     </script>
-
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js"
@@ -41,6 +34,8 @@
       referrerpolicy="no-referrer"
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="../css/personalization.css" />
   </head>
 
   <body class="transparents">
@@ -70,7 +65,7 @@
     <script>
       const ddaHeader = document.querySelector("dda-header");
       ddaHeader.addEventListener("languageSwitch", (event) => {
-        window.location.assign(window.location.origin + "/ar" + window.location.pathname);
+        window.location.assign(window.location.origin + "/aboutusar.html");
       });
       ddaHeader.addEventListener("blindContrast", (event) => {
         $("html").attr("data-theme", "dark");
@@ -107,7 +102,7 @@
         <script>
           const myAlert = document.querySelector("dda-alert");
           myAlert.addEventListener("firstClick", (event) => {
-            $('dda-alert').hide()
+            $("dda-alert").hide();
           });
         </script>
 

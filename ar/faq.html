@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="light" dir="rtl">
   <head>
     <meta charset="UTF-8" />
@@ -57,8 +57,8 @@
       blindcontrast="() => console.log('Blind Text')"
       redcontrast="() => console.log('Red Text')"
       greencontrast="() => console.log('Green Text')"
-      quick-links='[{"label":"Home","href":"/","subMenu":[]},{"label":"Components","href":"/components.html","subMenu":[{"title":"Main Services","description":"Our most important services","icon":"sentiment_satisfied","href":"#"},{"title":"Sub services","description":"optional services to help you","icon":"sentiment_dissatisfied","href":"#"}]},{"label":"About","href":"./about-us.html","subMenu":[]}]'
-      side-menu-items='[{"label":"About","href":"/about-us.html","subMenu":[]},{"label":"Components","href":"/components.html","subMenu":[]},{"label":"Contact","href":"/contact-us.html","subMenu":[]},{"label":"FAQ","href":"/faq.html","subMenu":[]},{"label":"Sample Link","href":"#","subMenu":[{"label":"Submenu-1","href":"#"},{"label":"Submenu-2","href":"#"}]}]'
+      quick-links='[{"label":"الصفحة الرئيسية","href":"/ar/","subMenu":[]},{"label":"عناصر","href":"/ar/components.html","subMenu":[]},{"label":"معلومات عنا","href":"/ar/about-us.html","subMenu":[]}]'
+      side-menu-items='[{"label":"معلومات عنا","href":"/ar/about-us.html","subMenu":[]},{"label":"عناصر","href":"/ar/components.html","subMenu":[]},{"label":"اتصل بنا","href":"/ar/contact-us.html","subMenu":[]},{"label":"الأسئلة الشائعة","href":"/ar/faq.html","subMenu":[]},{"label":"رابط العينة","href":"#","subMenu":[{"label":"Submenu-1","href":"#"},{"label":"Submenu-2","href":"#"}]}]'
       class="hydrated"
     >
     </dda-header>
@@ -66,7 +66,9 @@
     <script>
       const ddaHeader = document.querySelector("dda-header");
       ddaHeader.addEventListener("languageSwitch", (event) => {
-        window.location.assign(window.location.origin + "/aboutusar.html");
+        window.location.assign(
+          window.location.origin + window.location.pathname.replace("/ar", "")
+        );
       });
       ddaHeader.addEventListener("blindContrast", (event) => {
         $("html").attr("data-theme", "dark");
@@ -85,13 +87,13 @@
         >
         </dda-breadcrumb>
 
-        <h1>Frequently Asked Questions</h1>
-        <p class="small">Answers to most asked questions!</p>
+        <h1>الأسئلة الشائعة</h1>
+        <p class="small">إجابات على الأسئلة الأكثر شيوعًا!</p>
 
         <div class="col-12 mb-4">
           <dda-accordion
             design="bg-border"
-            header_text="What is this website ?"
+            header_text="ما هو هذا الموقع ؟"
             custom_class="mb-2"
             component_mode=""
             accordion_icon="info"
@@ -103,38 +105,34 @@
           </dda-accordion>
           <dda-accordion
             design="bg-border"
-            header_text="What is the Dubai Design System Component Library?"
-            body_description="This is the accordion body content."
+            header_text="ما هي مكتبة مكونات نظام تصميم دبي؟"
             custom_class="mb-2"
             component_mode=""
             accordion_icon="manage_search"
           >
             <p>
-              The Dubai Design System Component Library is a set of pre-built,
-              reusable UI components that help developers create consistent and
-              scalable applications across Dubai government portals.
+              هذا موقع ويب نموذجي تم إنشاؤه لعرض استخدام مكتبة مكونات الويب
+              لنظام التصميم في دبي
             </p>
           </dda-accordion>
           <dda-accordion
             design="bg-border"
-            header_text="Which frameworks are supported by the component library?"
-            body_description="This is the accordion body content."
+            header_text="ما هي الأطر التي تدعمها مكتبة المكونات؟"
             custom_class="mb-2"
             component_mode=""
             accordion_icon="dataset"
           >
-            <p>The library supports React, Vue, Angular, and HTML/CSS.</p>
+            <p>تدعم المكتبة React، وVue، وAngular، وHTML/CSS.</p>
             <p>
               <em
-                >Note: This sample website is using Vanilla JS library (Plain
-                HTML/CSS/Javascript)</em
+                >ملاحظة: يستخدم هذا الموقع الإلكتروني النموذجي مكتبة Vanilla JS
+                (HTML/CSS/Javascript عادي)</em
               >
             </p>
           </dda-accordion>
           <dda-accordion
             design="bg-border"
-            header_text="Is the component library customizable?"
-            body_description="This is the accordion body content."
+            header_text="هل مكتبة المكونات قابلة للتخصيص؟"
             custom_class="mb-2"
             component_mode=""
             accordion_icon="info"
@@ -146,14 +144,13 @@
           </dda-accordion>
           <dda-accordion
             design="bg-border"
-            header_text="Where can I find the documentation?"
-            body_description="This is the accordion body content."
+            header_text="أين يمكنني العثور على الوثائق؟"
             custom_class="mb-2"
             component_mode=""
             accordion_icon="info"
           >
             <p>
-              The official documentation is available at the below link:<br />
+              الوثائق الرسمية متاحة على الرابط أدناه:<br />
               <a href="https://digital-dubai.gitbook.io/dubai-design-system"
                 >Dubai Design System Documentation</a
               >
@@ -161,48 +158,44 @@
           </dda-accordion>
           <dda-accordion
             design="bg-border"
-            header_text="Can I request new components or report issues?"
-            body_description="This is the accordion body content."
+            header_text="هل يمكنني طلب مكونات جديدة أو الإبلاغ عن المشكلات؟"
             custom_class="mb-2"
             component_mode=""
             accordion_icon="info"
           >
             <p>
-              Yes, feedback and issue reports are welcome. You can share them
-              via email as mentioned in the documentation.
+              نعم، نرحب بالملاحظات وتقارير المشكلات. يمكنك مشاركتها عبر البريد
+              الإلكتروني كما هو مذكور في الوثائق.
             </p>
           </dda-accordion>
           <dda-accordion
             design="bg-border"
-            header_text="Are there pre-built templates available?"
-            body_description="This is the accordion body content."
+            header_text="هل هناك قوالب جاهزة متاحة؟"
             custom_class="mb-2"
             component_mode=""
             accordion_icon="info"
           >
             <p>
-              Yes, the library provides pre-built templates for common layouts
-              like Homepages, Footers, and Headers.
+              نعم، توفر المكتبة قوالب جاهزة مسبقًا للتخطيطات الشائعة مثل الصفحات
+              الرئيسية والتذييلات والرؤوس.
             </p>
             <p>
               <em>
-                Note: Additional templates like this one can also be found in
-                the documentation to help you get started!
+                ملاحظة: يمكن أيضًا العثور على قوالب إضافية مثل هذا القالب في
+                الوثائق لمساعدتك في البدء!
               </em>
             </p>
           </dda-accordion>
           <dda-accordion
             design="bg-border"
-            header_text="Will the library receive regular updates?"
+            header_text="هل ستحصل المكتبة على تحديثات منتظمة؟"
             custom_class="mb-2"
             component_mode=""
             accordion_icon="info"
           >
             <p>
-              Yes, the library follows a
-              <strong>Continuous Improvement Roadmap</strong> to ensure the
-              components stay up-to-date with technology trends and user
-              feedback.
+              نعم، تتبع المكتبة
+              <strong>"Continuous Improvement Roadmap"</strong> لضمان مواكبة المكونات لاتجاهات التكنولوجيا وردود أفعال المستخدمين.
             </p>
           </dda-accordion>
         </div>

@@ -54,7 +54,7 @@ export class DdaPagination {
         }
     }
     render() {
-        return (h(Host, { key: '755c2d00ba4ce4b50233c9aa0226881b72357615' }, h("div", { key: '8948a60d4016bf3aa340bde64631782c2f0db24b', class: `dda-pagination-container` }, this.renderPagination())));
+        return (h(Host, { key: '92f165f2831f0d9bc6f1eca0b2558cb43908bc99' }, h("div", { key: 'ee1fb7c0f3ce654f01fef086201b0d7c500e86e1', class: `dda-pagination-container` }, this.renderPagination())));
     }
     static get is() { return "dda-pagination"; }
     static get originalStyleUrls() {

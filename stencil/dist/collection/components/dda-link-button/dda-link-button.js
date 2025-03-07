@@ -26,9 +26,9 @@ export class DdaLinkButton {
             this.custom_class, // Include custom class
             this.component_mode,
         ].filter(Boolean).join(' ');
-        return (h(Host, { key: '4e14e675f584dd8ea156dfb275b3a47a4103e5f6' }, h("a", { key: '87e200e0d9b1f4c90568db64516c0ff2c36a3300',
+        return (h(Host, { key: '8580cfbb9d3cc6b1c49db165afcbdacd510d0b72' }, h("a", { key: '9d7032c26ecd10e8bf40c818cf6b44881ddd13b7',
             //   type={this.type}
-            id: this.button_id, href: this.href, class: linkbuttonClass, "aria-label": this.aria_label }, this.start_icon && h("i", { key: '32e2ab8d8a2d0176bf0383dfd1c642acc60c5610', class: "material-icons  material-symbols-outlined" }, this.start_icon), h("slot", { key: '1df5794f2f47bd1b6379df360225c8f8421392c2' }), this.end_icon && h("i", { key: '2901db28a23b769fa4de498cfae56abb73638a10', class: "material-icons  material-symbols-outlined" }, this.end_icon))));
+            id: this.button_id, href: this.href, class: linkbuttonClass, "aria-label": this.aria_label }, this.start_icon && h("i", { key: 'eaf704d17651440e47a708289334623ae44c749e', class: "material-icons  material-symbols-outlined" }, this.start_icon), h("slot", { key: '86624cfe73eefd8c5fba02476531e9db8fd9f69a' }), this.end_icon && h("i", { key: '20ed420441b072f86a04869bfc44dccb2cf2a294', class: "material-icons  material-symbols-outlined" }, this.end_icon))));
     }
     static get is() { return "dda-link-button"; }
     static get originalStyleUrls() {

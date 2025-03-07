@@ -186,9 +186,6 @@ export namespace Components {
         "sideMenuItems": string;
     }
     interface DdaHomeBanner {
-        "autoplay": boolean;
-        "images": { src: string; title: string; subtitle: string; link: string }[];
-        "interval": number;
     }
     interface DdaHorizontalStepper {
         "component_mode"?: string;
@@ -437,6 +434,15 @@ export namespace Components {
         "position": 'top' | 'bottom' | 'left' | 'right';
         "title_text": string;
     }
+    interface DdaUiCard {
+        "icon": string;
+        "image": string;
+        "link": string;
+        "linktext": string;
+        "maintitle": string;
+        "subtitle": string;
+        "type": 'default' | 'custom';
+    }
     interface DdaVerticalStepper {
         "component_mode"?: string;
         "current_Step": number;
@@ -455,6 +461,10 @@ export interface DdaHeaderCustomEvent<T> extends CustomEvent<T> {
 export interface DdaTabsCustomEvent<T> extends CustomEvent<T> {
     detail: T;
     target: HTMLDdaTabsElement;
+}
+export interface DdaUiCardCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLDdaUiCardElement;
 }
 declare global {
     interface HTMLDdaAccordionElement extends Components.DdaAccordion, HTMLStencilElement {
@@ -690,6 +700,23 @@ declare global {
         prototype: HTMLDdaTooltipElement;
         new (): HTMLDdaTooltipElement;
     };
+    interface HTMLDdaUiCardElementEventMap {
+        "linkClick": void;
+    }
+    interface HTMLDdaUiCardElement extends Components.DdaUiCard, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLDdaUiCardElementEventMap>(type: K, listener: (this: HTMLDdaUiCardElement, ev: DdaUiCardCustomEvent<HTMLDdaUiCardElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLDdaUiCardElementEventMap>(type: K, listener: (this: HTMLDdaUiCardElement, ev: DdaUiCardCustomEvent<HTMLDdaUiCardElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLDdaUiCardElement: {
+        prototype: HTMLDdaUiCardElement;
+        new (): HTMLDdaUiCardElement;
+    };
     interface HTMLDdaVerticalStepperElement extends Components.DdaVerticalStepper, HTMLStencilElement {
     }
     var HTMLDdaVerticalStepperElement: {
@@ -729,6 +756,7 @@ declare global {
         "dda-textarea": HTMLDdaTextareaElement;
         "dda-toggle": HTMLDdaToggleElement;
         "dda-tooltip": HTMLDdaTooltipElement;
+        "dda-ui-card": HTMLDdaUiCardElement;
         "dda-vertical-stepper": HTMLDdaVerticalStepperElement;
     }
 }
@@ -923,9 +951,6 @@ declare namespace LocalJSX {
         "sideMenuItems"?: string;
     }
     interface DdaHomeBanner {
-        "autoplay"?: boolean;
-        "images"?: { src: string; title: string; subtitle: string; link: string }[];
-        "interval"?: number;
     }
     interface DdaHorizontalStepper {
         "component_mode"?: string;
@@ -1175,6 +1200,16 @@ declare namespace LocalJSX {
         "position"?: 'top' | 'bottom' | 'left' | 'right';
         "title_text"?: string;
     }
+    interface DdaUiCard {
+        "icon"?: string;
+        "image"?: string;
+        "link"?: string;
+        "linktext"?: string;
+        "maintitle"?: string;
+        "onLinkClick"?: (event: DdaUiCardCustomEvent<void>) => void;
+        "subtitle"?: string;
+        "type"?: 'default' | 'custom';
+    }
     interface DdaVerticalStepper {
         "component_mode"?: string;
         "current_Step"?: number;
@@ -1214,6 +1249,7 @@ declare namespace LocalJSX {
         "dda-textarea": DdaTextarea;
         "dda-toggle": DdaToggle;
         "dda-tooltip": DdaTooltip;
+        "dda-ui-card": DdaUiCard;
         "dda-vertical-stepper": DdaVerticalStepper;
     }
 }
@@ -1253,6 +1289,7 @@ declare module "@stencil/core" {
             "dda-textarea": LocalJSX.DdaTextarea & JSXBase.HTMLAttributes<HTMLDdaTextareaElement>;
             "dda-toggle": LocalJSX.DdaToggle & JSXBase.HTMLAttributes<HTMLDdaToggleElement>;
             "dda-tooltip": LocalJSX.DdaTooltip & JSXBase.HTMLAttributes<HTMLDdaTooltipElement>;
+            "dda-ui-card": LocalJSX.DdaUiCard & JSXBase.HTMLAttributes<HTMLDdaUiCardElement>;
             "dda-vertical-stepper": LocalJSX.DdaVerticalStepper & JSXBase.HTMLAttributes<HTMLDdaVerticalStepperElement>;
         }
     }

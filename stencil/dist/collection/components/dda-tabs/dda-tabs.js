@@ -38,7 +38,7 @@ export class DdaTabs {
         }
     }
     render() {
-        return (h(Host, { key: 'a8b00f34ce9fbe71fb713ecf817172771c480a0e' }, h("div", { key: 'f88a8860b489454ebd1e8f74b52a76aa439596fd', class: `dda-tabs-container ${this.hover_style} ${this.custom_class} ${this.component_mode}` }, this.parsedTabs.map((title, index) => (h("button", { id: this.button_id, "aria-label": this.aria_label, type: "button", class: `dda-tab-item ${this.active_tab === index ? 'active' : ''}`, onClick: () => this.setActiveTab(index) }, this.type === 'text-icon' && h("i", { class: `material-icons` }, this.parsedIcons[index] || ""), h("span", null, title)))))));
+        return (h(Host, { key: 'f1ad7750e988538d8502e1d59257df25669824dd' }, h("div", { key: '595a609824a6a850e3a8fab4977ab78c6c060ef8', class: `dda-tabs-container ${this.hover_style} ${this.custom_class} ${this.component_mode}` }, this.parsedTabs.map((title, index) => (h("button", { id: this.button_id, "aria-label": this.aria_label, type: "button", class: `dda-tab-item ${this.active_tab === index ? 'active' : ''}`, onClick: () => this.setActiveTab(index) }, this.type === 'text-icon' && h("i", { class: `material-icons` }, this.parsedIcons[index] || ""), h("span", null, title)))))));
     }
     static get is() { return "dda-tabs"; }
     static get originalStyleUrls() {

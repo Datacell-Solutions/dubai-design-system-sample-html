@@ -41,32 +41,34 @@
 
   <body class="transparents">
     <dda-header
-      first-logo-src="assets/img/government-of-dubai.svg"
-      first-logo-white-src="assets/img/government-of-dubai-white.svg"
-      first-logo-alt="undefined"
-      second-logo-src="assets/img/digital-logo.svg"
-      second-logo-white-src="assets/img/digital-logo-white.svg"
-      second-logo-alt="Dubai-Digital-Authority"
-      login-link="/login.html"
-      readspeakerlink="app-eu.readspeaker.com"
-      languageswitch="() => console.log('Language Switcher')"
-      smtextsize="() => console.log('Small Text')"
-      basetextsize="() => console.log('Base Text')"
-      lgtextsize="() => console.log('Large Text')"
-      normalcontrast="() => console.log('Normal Text')"
-      blindcontrast="() => console.log('Blind Text')"
-      redcontrast="() => console.log('Red Text')"
-      greencontrast="() => console.log('Green Text')"
-      quick-links='[{"label":"Home","href":"/","subMenu":[]},{"label":"Components","href":"/components.html","subMenu":[{"title":"Main Services","description":"Our most important services","icon":"sentiment_satisfied","href":"#"},{"title":"Sub services","description":"optional services to help you","icon":"sentiment_dissatisfied","href":"#"}]},{"label":"About","href":"./about-us.html","subMenu":[]}]'
-      side-menu-items='[{"label":"About","href":"/about-us.html","subMenu":[]},{"label":"Components","href":"/components.html","subMenu":[]},{"label":"Contact","href":"/contact-us.html","subMenu":[]},{"label":"FAQ","href":"/faq.html","subMenu":[]},{"label":"Sample Link","href":"#","subMenu":[{"label":"Submenu-1","href":"#"},{"label":"Submenu-2","href":"#"}]}]'
-      class="hydrated"
-    >
-    </dda-header>
+    first-logo-src="assets/img/government-of-dubai.svg"
+    first-logo-white-src="assets/img/government-of-dubai-white.svg"
+    first-logo-alt="undefined"
+    second-logo-src="assets/img/digital-logo.svg"
+    second-logo-white-src="assets/img/digital-logo-white.svg"
+    second-logo-alt="Dubai-Digital-Authority"
+    login-link="/login.html"
+    readspeakerlink="app-eu.readspeaker.com"
+    languageswitch="() => console.log('Language Switcher')"
+    smtextsize="() => console.log('Small Text')"
+    basetextsize="() => console.log('Base Text')"
+    lgtextsize="() => console.log('Large Text')"
+    normalcontrast="() => console.log('Normal Text')"
+    blindcontrast="() => console.log('Blind Text')"
+    redcontrast="() => console.log('Red Text')"
+    greencontrast="() => console.log('Green Text')"
+    quick-links='[{"label":"الصفحة الرئيسية","href":"/ar/","subMenu":[]},{"label":"عناصر","href":"/ar/components.html","subMenu":[]},{"label":"معلومات عنا","href":"/ar/about-us.html","subMenu":[]}]'
+    side-menu-items='[{"label":"معلومات عنا","href":"/ar/about-us.html","subMenu":[]},{"label":"عناصر","href":"/ar/components.html","subMenu":[]},{"label":"اتصل بنا","href":"/ar/contact-us.html","subMenu":[]},{"label":"الأسئلة الشائعة","href":"/ar/faq.html","subMenu":[]},{"label":"رابط العينة","href":"#","subMenu":[{"label":"Submenu-1","href":"#"},{"label":"Submenu-2","href":"#"}]}]'
+    class="hydrated"
+  >
+  </dda-header>
 
     <script>
       const ddaHeader = document.querySelector("dda-header");
       ddaHeader.addEventListener("languageSwitch", (event) => {
-        window.location.assign(window.location.origin + "/aboutusar.html");
+        window.location.assign(
+          window.location.origin + window.location.pathname.replace("/ar", "")
+        );
       });
       ddaHeader.addEventListener("blindContrast", (event) => {
         $("html").attr("data-theme", "dark");

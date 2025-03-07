@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="light" dir="">
   <head>
     <meta charset="UTF-8" />
@@ -70,7 +70,9 @@
     <script>
       const ddaHeader = document.querySelector("dda-header");
       ddaHeader.addEventListener("languageSwitch", (event) => {
-        window.location.assign(window.location.origin + "/ar" + window.location.pathname);
+        window.location.assign(
+          window.location.origin + "/ar" + window.location.pathname
+        );
       });
       ddaHeader.addEventListener("blindContrast", (event) => {
         $("html").attr("data-theme", "dark");
@@ -90,10 +92,188 @@
         </dda-breadcrumb>
 
         <h1>Components</h1>
-        <p class="small">Answers to most asked questions!</p>
+        <p class="small">
+          <a
+            href="https://digital-dubai.gitbook.io/dubai-design-system"
+            target="_blank"
+            >GitBook</a
+          >
+          includes detailed documentation covering each component's usage,
+          anatomy, and dos and don’ts.!
+        </p>
+
+        <hr />
+
+        <h3>Foundation</h3>
 
         <div class="row py-4">
-          
+          <div class="col-sm-3 pb-4">
+            <dda-ui-card
+              maintitle="Typography"
+              subtitle="Type Scales create a structured and effective visual hierarchy..."
+              link="https://digital-dubai.gitbook.io/dubai-design-system/foundations/typography"
+              linktext=""
+              image="assets/img/component_icons/Foundations/Typography.svg"
+            >
+            </dda-ui-card>
+          </div>
+          <div class="col-sm-3 pb-4">
+            <dda-ui-card
+              maintitle="Colors"
+              subtitle="Key colors are the core colors selected from the tonal palette that serve..."
+              link="https://digital-dubai.gitbook.io/dubai-design-system/foundations/colors"
+              linktext=""
+              image="assets/img/component_icons/Foundations/Colors.svg"
+            >
+            </dda-ui-card>
+          </div>
+          <div class="col-sm-3 pb-4">
+            <dda-ui-card
+              maintitle="Icons & Visuals"
+              subtitle="Use a unified style (e.g., line, filled, flat, or outlined) to ensure visual harmony..."
+              link="https://digital-dubai.gitbook.io/dubai-design-system/foundations/icons-and-visuals"
+              linktext=""
+              image="assets/img/component_icons/Foundations/Icons & visuals.svg"
+            >
+            </dda-ui-card>
+          </div>
+          <div class="col-sm-3 pb-4">
+            <dda-ui-card
+              maintitle="Images"
+              subtitle="Follow a style aligned with the brand identity, whether minimalistic, vibrant..."
+              link="https://digital-dubai.gitbook.io/dubai-design-system/foundations/images"
+              linktext=""
+              image="assets/img/component_icons/Foundations/Images.svg"
+            >
+            </dda-ui-card>
+          </div>
+          <div class="col-sm-3 pb-4">
+            <dda-ui-card
+              maintitle="Layout & Breakpoints"
+              subtitle="Breakpoints are predefined screen widths that dictate how a responsive layout adapts..."
+              link="https://digital-dubai.gitbook.io/dubai-design-system/foundations/ayout-and-breakpoints"
+              linktext=""
+              image="assets/img/component_icons/Foundations/Layout & Breakpoints.svg"
+            >
+            </dda-ui-card>
+          </div>
+        </div>
+
+        <hr />
+
+        <h3>Components</h3>
+
+        <div class="row py-4">
+          <div class="col-sm-3 pb-4">
+            <dda-ui-card
+              maintitle="Buttons"
+              subtitle="Buttons are fundamental interactive elements used to trigger actions..."
+              link="https://digital-dubai.gitbook.io/dubai-design-system/components/Buttons"
+              linktext="View Details"
+              image="assets/img/component_icons/Foundations/Button.svg"
+            >
+            </dda-ui-card>
+          </div>
+          <div class="col-sm-3 pb-4">
+            <dda-ui-card
+              maintitle="Accordion"
+              subtitle="Accordions are used to organize content into collapsible sections..."
+              link="https://digital-dubai.gitbook.io/dubai-design-system/components/accordion"
+              linktext="View Details"
+              image="assets/img/component_icons/Foundations/Accordion.svg"
+            >
+            </dda-ui-card>
+          </div>
+          <div class="col-sm-3 pb-4">
+            <dda-ui-card
+              maintitle="Alert"
+              subtitle="Alert banners are used to convey important information or warnings..."
+              link="https://digital-dubai.gitbook.io/dubai-design-system/components/alerts"
+              linktext="View Details"
+              image="assets/img/component_icons/Foundations/Alert.svg"
+            >
+            </dda-ui-card>
+          </div>
+          <div class="col-sm-3 pb-4">
+            <dda-ui-card
+              maintitle="Avatar"
+              subtitle="Avatar visually represents a user through a profile image or initials..."
+              link="https://digital-dubai.gitbook.io/dubai-design-system/components/avatar"
+              linktext="View Details"
+              image="assets/img/component_icons/Foundations/Avatar.svg"
+            >
+            </dda-ui-card>
+          </div>
+          <div class="col-sm-3 pb-4">
+            <dda-ui-card
+              maintitle="Breadcrumbs"
+              subtitle="Breadcrumbs provide a navigation aid that shows users their current location..."
+              link="https://digital-dubai.gitbook.io/dubai-design-system/components/Breadcrumbs"
+              linktext="View Details"
+              image="assets/img/component_icons/Foundations/Breadcrumbs.svg"
+            >
+            </dda-ui-card>
+          </div>
+          <div class="col-sm-3 pb-4">
+            <dda-ui-card
+              maintitle="Pagination"
+              subtitle="Pagination divides content into discrete pages, allowing users to navigate..."
+              link="https://digital-dubai.gitbook.io/dubai-design-system/components/pagination"
+              linktext="View Details"
+              image="assets/img/component_icons/Foundations/Pagination.svg"
+            >
+            </dda-ui-card>
+          </div>
+          <div class="col-sm-3 pb-4">
+            <dda-ui-card
+              maintitle="Progress Indicators"
+              subtitle="Progress Indicators visually display the completion status of a task or process..."
+              link="https://digital-dubai.gitbook.io/dubai-design-system/components/progress-indicators"
+              linktext="View Details"
+              image="assets/img/component_icons/Foundations/progress bar.svg"
+            >
+            </dda-ui-card>
+          </div>
+          <div class="col-sm-3 pb-4">
+            <dda-ui-card
+              maintitle="Tabs"
+              subtitle="Tabs organize content into separate sections within the same interface..."
+              link="https://digital-dubai.gitbook.io/dubai-design-system/components/tabs"
+              linktext="View Details"
+              image="assets/img/component_icons/Foundations/tabs_component.svg"
+            >
+            </dda-ui-card>
+          </div>
+          <div class="col-sm-3 pb-4">
+            <dda-ui-card
+              maintitle="Input Field"
+              subtitle="Input Field allows users to input text into a UI. It is used in forms..."
+              link="https://digital-dubai.gitbook.io/dubai-design-system/components/text-input-field"
+              linktext="View Details"
+              image="assets/img/component_icons/Foundations/text-field.svg"
+            >
+            </dda-ui-card>
+          </div>
+          <div class="col-sm-3 pb-4">
+            <dda-ui-card
+              maintitle="Tooltip"
+              subtitle="Tooltips are used to provide additional information when users hover..."
+              link="https://digital-dubai.gitbook.io/dubai-design-system/components/tooltip"
+              linktext="View Details"
+              image="assets/img/component_icons/Foundations/tooltip.svg"
+            >
+            </dda-ui-card>
+          </div>
+          <div class="col-sm-3 pb-4">
+            <dda-ui-card
+              maintitle="Steps"
+              subtitle="Step indicators are used to show users their current position within a sequence..."
+              link="https://digital-dubai.gitbook.io/dubai-design-system/components/steps"
+              linktext="View Details"
+              image="assets/img/component_icons/Foundations/Steps_component.svg"
+            >
+            </dda-ui-card>
+          </div>
         </div>
       </div>
     </div>

@@ -1,20 +1,11 @@
 export declare class DdaHomeBanner {
-    images: {
-        src: string;
-        title: string;
-        subtitle: string;
-        link: string;
-    }[];
-    autoplay: boolean;
-    interval: number;
+    el: HTMLElement;
     currentSlide: number;
-    private slideInterval;
+    slides: HTMLElement[];
     componentDidLoad(): void;
-    disconnectedCallback(): void;
-    startAutoplay(): void;
-    stopAutoplay(): void;
+    updateSlides(): void;
     nextSlide(): void;
     prevSlide(): void;
-    setSlide(index: number): void;
+    setSlide(index: any): void;
     render(): any;
 }

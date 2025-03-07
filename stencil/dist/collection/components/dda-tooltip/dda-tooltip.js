@@ -5,7 +5,7 @@ export class DdaTooltip {
         this.custom_class = '';
     }
     render() {
-        return (h(Host, { key: 'bc7f5aabee92b53bcb5b9bdfa367e1f2f9b769ef' }, h("div", { key: 'ddccac03212eab627ee15eb47e749ab13e46cf8b', class: `dda-tooltip-container ${this.custom_class} ${this.component_mode}` }, h("slot", { key: '92598467ff3992d790f7a34217f0184bd5996a58' }), h("div", { key: '00887d5c9fac11a600c46cd334cf9f6a62a2a81d', class: `dda-tooltip-box ${this.position}` }, h("strong", { key: '5b03c58d01e5641f9fb3f7f7f6ae621248866a1d' }, this.title_text), h("p", { key: 'aee954d4991d02d21142b7145607e1c4811c30d2' }, this.description)))));
+        return (h(Host, { key: 'de0c09d6c6430f2a166785d1c405bbc90cc1f4f3' }, h("div", { key: 'f439b79181d4c912fa93f8cc3cc59bfced98bb87', class: `dda-tooltip-container ${this.custom_class} ${this.component_mode}` }, h("slot", { key: '462e1f0f2de1b96da357c25c182fb819f6d54543' }), h("div", { key: '7676df25a3febbf2f8629a846ebd5e350c149a2d', class: `dda-tooltip-box ${this.position}` }, h("strong", { key: 'b7a14506db338b3bcde8e3b64891d1268961b8cf' }, this.title_text), h("p", { key: 'fe68d986f4f9d014be4744d6b56f801eb182265b' }, this.description)))));
     }
     static get is() { return "dda-tooltip"; }
     static get originalStyleUrls() {

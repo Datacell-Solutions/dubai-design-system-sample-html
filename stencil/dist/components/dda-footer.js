@@ -1,5 +1,5 @@
 import { p as proxyCustomElement, H, h } from './p-4928c8aa.js';
-import { d as defineCustomElement$2 } from './p-1de89370.js';
+import { d as defineCustomElement$2 } from './p-64e3720e.js';
 
 const ddaFooterCss = "";
 const DdaFooterStyle0 = ddaFooterCss;

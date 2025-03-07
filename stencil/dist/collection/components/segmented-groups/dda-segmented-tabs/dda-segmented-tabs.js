@@ -7,7 +7,7 @@ export class DdaSegmentedTabs {
         this.parsedItems = JSON.parse(this.items);
     }
     render() {
-        return (h("div", { key: '030408f1dc85e10e228a47669ba15797a3d98cec', class: `dda-segmented-group ${this.custom_class} ${this.radius_type} ${this.component_mode}` }, this.parsedItems.map(item => (item.startsWith('fo') ?
+        return (h("div", { key: '94cc2c74cf56e9193e1ffb0cbfd5ff709d6ce23f', class: `dda-segmented-group ${this.custom_class} ${this.radius_type} ${this.component_mode}` }, this.parsedItems.map(item => (item.startsWith('fo') ?
             h("button", { class: "dda-segmented-item" }, h("i", { class: "material-icons  material-symbols-outlined" }, item)) :
             h("button", { class: "dda-segmented-item" }, item)))));
     }

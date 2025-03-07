@@ -30,6 +30,7 @@
     "components/dda-textarea/dda-textarea.js",
     "components/dda-toggle/dda-toggle.js",
     "components/dda-tooltip/dda-tooltip.js",
+    "components/dda-ui-card/dda-ui-card.js",
     "components/segmented-groups/dda-segmented-tabs/dda-segmented-tabs.js",
     "components/stepper/dda-horizontal-stepper/dda-horizontal-stepper.js",
     "components/stepper/dda-vertical-stepper/dda-vertical-stepper.js"

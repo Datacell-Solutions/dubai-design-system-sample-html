@@ -10,7 +10,7 @@ export class DdaProgressBar {
         const progressStyle = {
             width: `${this.progress}%`,
         };
-        return (h(Host, { key: '1cbbb0344201cb0fdd63f680c691035a45087bef' }, h("div", { key: 'f86d423baf6a4ac918110d898552db7bd68b7c60', class: `dda-progress-bar-container ${this.custom_class} ${this.component_mode}` }, h("div", { key: '68623fd7cf6676735075dca6150dfbf8ece6d87c', class: "dda-progress-bar" }, h("div", { key: 'e9c08e921057ee5ab1ba4da470b0af96de2ba9b0', class: "dda-progress-value", style: progressStyle }, this.tooltip && (h("div", { key: '7ee128960c876bfd673fffeca1b7b7f788337092', class: `dda-tooltip tooltip-${this.tooltip_position}` }, this.progress, "%")))), this.show_percentage_text && (h("span", { key: '366b374232873e5fe6e3ca62f827b513749540d6', class: "dda-percentage-text" }, this.progress, "%")))));
+        return (h(Host, { key: '1c36714216df20d9654d17a5774b24bf9bb78b36' }, h("div", { key: 'fd1828338c0f1438df1f71bd834a4b61c113a1db', class: `dda-progress-bar-container ${this.custom_class} ${this.component_mode}` }, h("div", { key: '651e8f37688d2e2452ead82d1c88203143175193', class: "dda-progress-bar" }, h("div", { key: 'b7c71a480f6ca5a691965f44a4f960b8ef546fe7', class: "dda-progress-value", style: progressStyle }, this.tooltip && (h("div", { key: 'fd8c4d05c8d915580550e75a874e57d369dbf0f9', class: `dda-tooltip tooltip-${this.tooltip_position}` }, this.progress, "%")))), this.show_percentage_text && (h("span", { key: '399744b56c44625523eb0f5623693667b907eb14', class: "dda-percentage-text" }, this.progress, "%")))));
     }
     static get is() { return "dda-progressbar"; }
     static get originalStyleUrls() {

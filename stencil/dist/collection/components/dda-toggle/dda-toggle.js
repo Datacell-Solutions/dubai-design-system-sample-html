@@ -10,7 +10,7 @@ export class DdaToggle {
             this.custom_class ? `${this.custom_class}` : '',
             this.component_mode,
         ].filter(Boolean).join(' ');
-        return (h(Host, { key: '1b4234b9a46329a309417c6665b94f2df2461fdc' }, h("label", { key: 'c9f3195e07abad38dfd8efef64ad74f96d136a9b', class: toggleClass, htmlFor: this.input_id }, h("input", { key: '1a27fb3d76761862c541f41395c249bfab4b9a3d', "aria-label": this.aria_label, type: "checkbox", id: this.input_id, name: this.group_name, checked: this.checked }), h("span", { key: '9ecefc14845f2843bb51703df4cb6babc07458b3', class: "toggle" }), h("p", { key: '1999434f0eb4450813aeef0c7de95ced4345894e' }, h("span", { key: '7d27b036fcd72d3af9fe1f4ea2212686561d3820', class: "toggle-title" }, "Radio Button Title"), h("span", { key: '19d2e7d6a429ae902594b815cfca4664a580fe0b', class: "toggle-supporting" }, "Supporting Text")))));
+        return (h(Host, { key: '7ebfcb39353ae8f50f79f9b78de3097fb65361b4' }, h("label", { key: 'a366bdef1ead14eb89703573d75c5fe75d32c4d7', class: toggleClass, htmlFor: this.input_id }, h("input", { key: 'ab49ff4c3901020052bf912412551415679ecae8', "aria-label": this.aria_label, type: "checkbox", id: this.input_id, name: this.group_name, checked: this.checked }), h("span", { key: 'ee11a76eefba9dc2412ca44449d2387f23e878a2', class: "toggle" }), h("p", { key: '4dd252689a00272f64b390331ad7c4886c36e315' }, h("span", { key: 'd281a3380a8e95cf4f79453c67c42815d1dd91bb', class: "toggle-title" }, "Radio Button Title"), h("span", { key: '36f0837980bdb4306aeb2796e1dda458da5a6c97', class: "toggle-supporting" }, "Supporting Text")))));
     }
     static get is() { return "dda-toggle"; }
     static get originalStyleUrls() {

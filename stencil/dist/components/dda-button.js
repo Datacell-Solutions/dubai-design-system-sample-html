@@ -1,4 +1,4 @@
-import { D as DdaButton$1, d as defineCustomElement$1 } from './p-1de89370.js';
+import { D as DdaButton$1, d as defineCustomElement$1 } from './p-64e3720e.js';
 
 const DdaButton = DdaButton$1;
 const defineCustomElement = defineCustomElement$1;

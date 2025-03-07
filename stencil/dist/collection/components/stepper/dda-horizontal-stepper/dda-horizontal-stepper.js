@@ -8,7 +8,7 @@ export class DdaHorizontalStepper {
         this.parsedSteps = JSON.parse(this.steps);
     }
     render() {
-        return (h(Host, { key: 'fe41b162669de83c860a814f92a407d1d3616cb9' }, h("div", { key: 'ab1158fa618d18fffb55ecd4424eebc7087457bf', class: `${this.custom_class} ${this.component_mode} h-stepper-container` }, this.parsedSteps.map((step, index) => (h("div", { class: `h-step ${index === this.current_step ? 'active' : ''} ${index < this.current_step ? 'completed' : ''}` }, h("div", { class: "h-step-indicator" }, h("div", { class: "circle" })), h("div", { class: "h-step-content" }, h("div", { class: "h-step-title" }, step.title), h("div", { class: "h-step-subtitle" }, step.subtitle), h("div", { class: "h-step-description" }, step.description))))))));
+        return (h(Host, { key: 'a28c9bc69b2ee386cb827c3ef09ad9a704fc7c4f' }, h("div", { key: 'aacc3e4e5f69d7b67c39e97ca52dda7a2b07ec47', class: `${this.custom_class} ${this.component_mode} h-stepper-container` }, this.parsedSteps.map((step, index) => (h("div", { class: `h-step ${index === this.current_step ? 'active' : ''} ${index < this.current_step ? 'completed' : ''}` }, h("div", { class: "h-step-indicator" }, h("div", { class: "circle" })), h("div", { class: "h-step-content" }, h("div", { class: "h-step-title" }, step.title), h("div", { class: "h-step-subtitle" }, step.subtitle), h("div", { class: "h-step-description" }, step.description))))))));
     }
     static get is() { return "dda-horizontal-stepper"; }
     static get originalStyleUrls() {
